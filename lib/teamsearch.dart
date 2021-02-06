@@ -10,7 +10,7 @@ class TeamSearch extends StatelessWidget {
           child: Column(
             children: [
               Text("Teammate Search"),
-              Image.asset('images/meandthebois.png'),
+              Image.asset('assets/images/meandthebois.png'),
               Text("Mau?"),
               RaisedButton(
                 child: Text("Start"),
@@ -55,7 +55,7 @@ class _Searching extends State<Searching> {
               margin: EdgeInsets.fromLTRB(50,200,50,0),
               child: Column(
                 children: [
-                  Image.asset('images/teamsearch.gif'),
+                  Image.asset('assets/images/teamsearch.gif'),
                   Text("Searching...")
                 ],
               )

@@ -11,7 +11,7 @@ class Dashboard extends StatefulWidget {
 class _Dashboard extends State<Dashboard> {
   int _selectedIndex = 0;
 
-  static const WidgetsName = ["Home", "Guild", "Bulletin", "Profile"];
+  static const WidgetsName = ["Home", "Guild", " ", "Bulletin", "Profile"];
 
   static List<Widget> _widgetOptions = <Widget> [
 
@@ -22,7 +22,7 @@ class _Dashboard extends State<Dashboard> {
     Text("Guild"),
 
     // Teammate Search
-    //Text("Teammate Search"),
+    Text("Teammate Search"),
 
     // Bulletin
     Text("Bulletin"),
@@ -141,6 +141,11 @@ class _Dashboard extends State<Dashboard> {
           ),
 
           BottomNavigationBarItem(
+            icon: Icon(Icons.search),
+            label: "Find Team",
+          ),
+
+          BottomNavigationBarItem(
             icon: Icon(Icons.article),
             label: 'Bulletin',
           ),
@@ -148,6 +153,7 @@ class _Dashboard extends State<Dashboard> {
           BottomNavigationBarItem(
             icon: Icon(Icons.account_circle),
             label: 'Profile',
+            backgroundColor: Colors.white,
           ),
 
         ],
@@ -158,10 +164,7 @@ class _Dashboard extends State<Dashboard> {
 
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => TeamSearch()));
-        },
+          Navigator.push(context, MaterialPageRoute(builder: (context) => TeamSearch()));        },
         child: Icon(Icons.search),
       ),
     );

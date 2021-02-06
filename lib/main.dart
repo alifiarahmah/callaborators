@@ -21,7 +21,7 @@ class Intro extends StatelessWidget {
 
                 SizedBox(height: 350),
 
-                Text("Insert persuasive and appealing catchphrase here"),
+                Text("Ready to meet your desired partner?"),
 
                 SizedBox(height: 30),
 
