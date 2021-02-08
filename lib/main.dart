@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'dashboard.dart';
 import 'loginregister.dart';
 
 void main() {
@@ -19,7 +18,11 @@ class Intro extends StatelessWidget {
             child: Column(
               children: [
 
-                SizedBox(height: 350),
+                SizedBox(height:150),
+
+                Image.asset('images/collab.png', height: 100),
+
+                SizedBox(height: 30),
 
                 Text("Ready to meet your desired partner?"),
 
@@ -31,7 +34,7 @@ class Intro extends StatelessWidget {
                     child: Column(
                       children: [
 
-                        FlatButton(
+                        RaisedButton(
                           onPressed: (){
                             Navigator.push(
                                 context,
@@ -45,14 +48,14 @@ class Intro extends StatelessWidget {
 
                         SizedBox(height: 10),
 
-                        FlatButton(
+                        TextButton(
                           onPressed: () {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(builder: (context) => Login())
                             );
                           },
-                          child: Text("I have an account", style: TextStyle(decoration: TextDecoration.underline)),
+                          child: Text("I have an account", style: TextStyle(color: Colors.black, decoration: TextDecoration.underline)),
                         )
 
                       ],

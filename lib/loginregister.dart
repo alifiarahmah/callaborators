@@ -68,7 +68,7 @@ class _RegisterState extends State<Register>{
                           child: Column(
                             children: [
 
-                              FlatButton(
+                              RaisedButton(
                                 onPressed: (){
                                   Navigator.push(
                                       context,
@@ -82,14 +82,14 @@ class _RegisterState extends State<Register>{
 
                               SizedBox(height: 10),
 
-                              FlatButton(
+                              TextButton(
                                 onPressed: () {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(builder: (context) => Login())
                                   );
                                 },
-                                child: Text("I have an account", style: TextStyle(decoration: TextDecoration.underline)),
+                                child: Text("I have an account", style: TextStyle(color: Colors.black, decoration: TextDecoration.underline)),
                               )
 
                             ],
@@ -199,14 +199,14 @@ class _LoginState extends State<Login>{
 
                               SizedBox(height: 10),
 
-                              FlatButton(
+                              TextButton(
                                 onPressed: () {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(builder: (context) => Login())
                                   );
                                 },
-                                child: Text("Don't have any account?", style: TextStyle(decoration: TextDecoration.underline)),
+                                child: Text("Don't have any account?", style: TextStyle(color: Colors.black, decoration: TextDecoration.underline)),
                               )
 
                             ],

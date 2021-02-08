@@ -1,5 +1,12 @@
+//import 'dart.js';
+
 import 'package:flutter/material.dart';
+
+import 'home.dart';
+import 'guild.dart';
 import 'teamsearch.dart';
+import 'bulletin.dart';
+import 'profile.dart';
 
 class Dashboard extends StatefulWidget {
   Dashboard({Key key}) : super(key: key);
@@ -14,33 +21,19 @@ class _Dashboard extends State<Dashboard> {
   static const WidgetsName = ["Home", "Guild", " ", "Bulletin", "Profile"];
 
   static List<Widget> _widgetOptions = <Widget> [
-
-    // Dashboard
-    Text("Home"),
-
-    // Guild
-    Text("Guild"),
-
-    // Teammate Search
-    Text("Teammate Search"),
-
-    // Bulletin
-    Text("Bulletin"),
-
-    // Profile
-    Column(
-      children: [
-        Icon(Icons.account_circle),
-        Text("Firstname Lastname")
-      ],
-    )
-
+    Home(),
+    Guild(),
+    null,
+    Bulletin(),
+    Profile()
   ];
 
   void _onItemTapped(int index){
-    setState(() {
-      _selectedIndex = index;
-    });
+    if (index != 2){
+      setState(() {
+        _selectedIndex = index;
+      });
+    }
   }
 
   @override
@@ -60,65 +53,6 @@ class _Dashboard extends State<Dashboard> {
         child:
         _widgetOptions[_selectedIndex],
       ),
-
-      /*
-      drawer: Drawer(
-        child: ListView(
-          // Important: Remove any padding from the ListView.
-          padding: EdgeInsets.zero,
-          children: <Widget>[
-            DrawerHeader(
-              child: Text('Avatar + namehere', style: TextStyle(color: Colors.white),),
-              decoration: BoxDecoration(
-                color: Colors.black,
-              ),
-            ),
-            ListTile(
-              title: Text('Profile'),
-              onTap: () {
-                // Update the state of the app.
-                // ...
-              },
-            ),
-            ListTile(
-              title: Text('Teammate Search'),
-              onTap: () {
-                // Update the state of the app.
-                // ...
-              },
-            ),
-            ListTile(
-              title: Text('Guild'),
-              onTap: () {
-                // Update the state of the app.
-                // ...
-              },
-            ),
-            ListTile(
-              title: Text('Idea Generator'),
-              onTap: () {
-                // Update the state of the app.
-                // ...
-              },
-            ),
-            ListTile(
-              title: Text('Bulletin Board'),
-              onTap: () {
-                // Update the state of the app.
-                // ...
-              },
-            ),
-            ListTile(
-              title: Text('Settings'),
-              onTap: () {
-                // Update the state of the app.
-                // ...
-              },
-            ),
-          ],
-        ),
-      ),
-      */
 
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.white,
@@ -142,7 +76,7 @@ class _Dashboard extends State<Dashboard> {
 
           BottomNavigationBarItem(
             icon: Icon(Icons.search),
-            label: "Find Team",
+            label: "Find Partner",
           ),
 
           BottomNavigationBarItem(
@@ -169,4 +103,10 @@ class _Dashboard extends State<Dashboard> {
       ),
     );
   }
+}
+
+Widget playYes(BuildContext context){
+  return Scaffold(
+      body: Text("Play, Yes!")
+  );
 }
