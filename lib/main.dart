@@ -1,11 +1,13 @@
+import 'package:callaborators/teamsearch.dart';
 import 'package:flutter/material.dart';
 
 import 'loginregister.dart';
+import 'dashboard.dart';
 
 void main() {
   runApp(MaterialApp(
       title: 'Call-A-Borators UI',
-      home: Intro()
+      home: Dashboard()
   ));
 }
 
@@ -18,11 +20,11 @@ class Intro extends StatelessWidget {
             child: Column(
               children: [
 
-                SizedBox(height:150),
+                SizedBox(height: MediaQuery.of(context).size.height * 0.3),
 
                 Image.asset('images/collab.png', height: 100),
 
-                SizedBox(height: 30),
+                SizedBox(height: 10),
 
                 Text("Ready to meet your desired partner?"),
 

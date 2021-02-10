@@ -28,6 +28,7 @@ class _RegisterState extends State<Register>{
                 ),
 
                 Container(
+                  width: MediaQuery.of(context).size.width * 0.8,
                   child: Column(
                     children: [
                       TextField(
@@ -63,7 +64,7 @@ class _RegisterState extends State<Register>{
                       SizedBox(height: 10),
 
                       ButtonTheme(
-                          minWidth: 300.0,
+                          minWidth: MediaQuery.of(context).size.width * 0.7,
                           height: 50.0,
                           child: Column(
                             children: [
@@ -140,6 +141,7 @@ class _LoginState extends State<Login>{
                 ),
 
                 Container(
+                  width: MediaQuery.of(context).size.width * 0.7,
                   child: Column(
                     children: [
                       TextField(
