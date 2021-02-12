@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:badges/badges.dart';
+import 'package:responsive_grid/responsive_grid.dart';
 
 class Profile extends StatefulWidget{
   @override
@@ -8,18 +8,32 @@ class Profile extends StatefulWidget{
 
 class _Profile extends State<Profile> {
 
+  var showInterest = false, showSkills = false, showAchv = false;
+
+  void switchInterest() {
+    setState(() {
+      showInterest = !showInterest;
+    });
+  }
+  void switchSkills() {
+    setState(() {
+      showSkills = !showSkills;
+    });
+  }
+  void switchAchv() {
+    setState(() {
+      showAchv = !showAchv;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
 
-    // bikin up down button
-    var showInterest = false, showSkills = false;
-
-    return Column(
-      children: [
-        Container(
-          child: Column(
+    return Container(
+      child: Column(
             children: [
 
+              // Avatar + Name + Desc
               Center(
                 child: Container(
                   padding: EdgeInsets.all(30),
@@ -39,27 +53,36 @@ class _Profile extends State<Profile> {
                 )
               ),
 
-              // DROPDOWN TIMEEEE
               // Interests
               Container(
                 child: Column(
                   children: [
                     Card(
                       child: InkWell(
-                        onTap: (){},
+                        onTap: switchInterest,
                         child: Container(
                           margin: EdgeInsets.all(10),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text("Interests", style: TextStyle(fontWeight: FontWeight.bold),),
-                              Icon(Icons.arrow_drop_down)
+                              showInterest? Icon(Icons.arrow_drop_down): Icon(Icons.arrow_drop_up)
                             ],
                           ),
                         ),
                       ),
                     ),
+
                     // badges
+                    //TODO: ganti jadi sangat fleksibel gitu
+                    Visibility(
+                      visible: showInterest,
+                      child: Container(
+                        height: 10,
+                        color: Colors.purple,
+                      )
+                    ),
+
                   ],
                 )
               ),
@@ -70,28 +93,70 @@ class _Profile extends State<Profile> {
                     children: [
                       Card(
                         child: InkWell(
-                          onTap: (){},
+                          onTap: switchSkills,
                           child: Container(
                             margin: EdgeInsets.all(10),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text("Skills", style: TextStyle(fontWeight: FontWeight.bold),),
-                                Icon(Icons.arrow_drop_down)
+                                showSkills? Icon(Icons.arrow_drop_down): Icon(Icons.arrow_drop_up)
                               ],
                             ),
                           ),
                         ),
                       ),
+
                       // badges
+                      //TODO: ganti jadi sangat fleksibel gitu
+                      Visibility(
+                          visible: showSkills,
+                          child: Container(
+                            height: 10,
+                            color: Colors.blue,
+                          )
+                      ),
+
+                    ],
+                  )
+              ),
+
+              // Achievements
+              Container(
+                  child: Column(
+                    children: [
+                      Card(
+                        child: InkWell(
+                          onTap: switchAchv,
+                          child: Container(
+                            margin: EdgeInsets.all(10),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text("Achievements", style: TextStyle(fontWeight: FontWeight.bold),),
+                                showAchv? Icon(Icons.arrow_drop_down): Icon(Icons.arrow_drop_up)
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+
+                      // badges
+                      //TODO: ganti jadi sangat fleksibel gitu
+                      Visibility(
+                          visible: showAchv,
+                          child: Container(
+                            height: 10,
+                            color: Colors.green,
+                          )
+                      ),
+
                     ],
                   )
               ),
 
             ]
           ),
-        )
-      ]
     );
   }
 }

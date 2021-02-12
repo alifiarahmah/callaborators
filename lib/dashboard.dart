@@ -28,21 +28,22 @@ class _Dashboard extends State<Dashboard> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return MaterialApp(
+      home: DefaultTabController(
+        length: 2,
+        child: Scaffold(
 
           appBar: AppBar(
             backgroundColor: Colors.black,
-            /*bottom: (_selectedIndex == 1) ? TabBar(
+            bottom: (_selectedIndex == 3) ? TabBar(
               tabs: [
-                Tab(text: 'Recommended for me'),
+                Tab(text: 'Suggested'),
                 Tab(text: 'Directory')
               ]
-            ): null,*/
+            ): null,
             title: Text(WidgetsName[_selectedIndex]),
             automaticallyImplyLeading: false,
           ),
-
-          // body is the majority of the screen.
 
           body: Container(
             padding: EdgeInsets.all(12),
@@ -97,7 +98,9 @@ class _Dashboard extends State<Dashboard> {
               Navigator.push(context, MaterialPageRoute(builder: (context) => TeamSearch()));        },
             child: Icon(Icons.search),
           ),
-        );
-
+        )
+      )
+    );
   }
+
 }

@@ -1,106 +1,55 @@
+//import 'dart:html';
+
 import 'package:flutter/material.dart';
 
 class Bulletin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ListView(
+    return TabBarView(
       children: [
-        Container(
-          child: Column(
-            children: [
-
-              // rekomendasi lomba
-              Text("Recommended for you", textAlign: TextAlign.left,style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-              SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                      children: [LombaBox(), LombaBox(), LombaBox()]
-                  )
-              ),
-            ],
-          ),
-        ),
-
-        // Direktori lomba
-        Container(
-            child: Column(
-              children: [
-                Text("Daftar lomba", textAlign: TextAlign.left,style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-                SingleChildScrollView(
-                    scrollDirection: Axis.vertical,
-                    child: Column(
-                        children: [LombaList(), LombaList(), LombaList()]
-                    )
-                ),
-              ],
-            )
-        )
+        LombaSuggested(),
+        LombaDirectory()
       ],
     );
-      /*Column(
-      children: [
-
-        // Recommended for you
-        Container(
-          child: Column(
-            children: [
-
-              // rekomendasi lomba
-              Text("Recommended for you", textAlign: TextAlign.left,style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                    children: [LombaBox(), LombaBox(), LombaBox()]
-                )
-              ),
-            ],
-          ),
-        ),
-
-        // Direktori lomba
-        Container(
-          child: Column(
-            children: [
-              Text("Daftar lomba", textAlign: TextAlign.left,style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-              SingleChildScrollView(
-                  scrollDirection: Axis.vertical,
-                  child: Column(
-                      children: [LombaBox(), LombaBox(), LombaBox()]
-                  )
-              ),
-            ],
-          )
-        )
-
-
-      ],
-    );*/
   }
 }
 
-// mari bikin widget lagi tapi isinya kotak lombanya
-class LombaBox extends StatelessWidget {
+class LombaSuggested extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 200,
-      width: 300,
-      child: Card(
-          child: Column(
-            children: [
-
-              // Keterangan
-              Container(
-                  child: Column(
-                    children: [
-                      Text("Judul Lomba", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
-                      Text("19 Januari 1954"),
-                    ],
-                  )
-              )
-            ],
-          )
+      child: ListView(
+        children: [
+          Text("Recommended for you", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+          LombaList(), LombaList(), LombaList(), LombaList(), LombaList()
+        ]
       )
+    );
+  }
+}
+
+class LombaDirectory extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        child: ListView(
+          children: [
+
+            TextField(
+              onChanged: (value) {},
+              decoration: InputDecoration(
+                border: OutlineInputBorder(
+                  borderSide: BorderSide(color: Colors.black)
+                ),
+                labelText: "Search",
+                suffixIcon: Icon(Icons.search)
+              ),
+            ),
+
+            LombaList(), LombaList(), LombaList(), LombaList()
+
+          ]
+        ),
     );
   }
 }
@@ -113,39 +62,43 @@ class LombaList extends StatelessWidget {
       padding: EdgeInsets.all(4),
       width: MediaQuery.of(context).size.width,
       child: Card(
-        child: Column(
-          children: [
+        child: InkWell(
+          onTap: (){},
+          child: Column(
+            children: [
 
-            // Keterangan
-            Container(
-                child: Column(
-                  children: [
-                    Align(
-                      alignment: Alignment.centerLeft,
-                      child: Column(
-                       children: [
-                         Text("Judul Lomba", textAlign: TextAlign.left, style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
-                         Text("19 Januari 1954", textAlign: TextAlign.left),
-                       ],
-                      )
-                    )
-                  ],
-                )
-            ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        // ingfo lomba
+                        Text("Judul Lomba", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+                        Text("Organizer", style: TextStyle(fontSize: 13, color: Colors.black45),),
+                        Text("15 Januari 2021")
 
-            ButtonBar(
+                        // chip lomba
+
+                      ],
+                    ),
+                  ),
+                  Icon(Icons.arrow_forward_ios)
+                ],
+              ),
+
+              /*ListView(
+              scrollDirection: Axis.horizontal,
               children: [
-                /*FlatButton(
-                  child: Text("pin ea"),
-                ),*/
-                RaisedButton(
-                  child: Text("More..."),
-                  onPressed: (){}
-                )
-              ],
-            )
 
-        ],
+              ],
+            )*/
+
+            ],
+          ),
         )
       )
     );
