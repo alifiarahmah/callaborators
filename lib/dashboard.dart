@@ -95,7 +95,8 @@ class _Dashboard extends State<Dashboard> {
 
           floatingActionButton: FloatingActionButton(
             onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => TeamSearch()));        },
+              Navigator.push(context, MaterialPageRoute(builder: (context) => TeamSearch()));
+            },
             child: Icon(Icons.search),
           ),
         )

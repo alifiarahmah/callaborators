@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'teamsearch.dart';
+import 'profile.dart';
 
 class Guild extends StatelessWidget {
   @override
@@ -78,7 +79,7 @@ class MemberList extends StatelessWidget{
   Widget build(BuildContext context) {
     return Card(
       child: InkWell(
-        onTap: (){},
+        onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => MemberProfile())),
         child: Container(
           margin: EdgeInsets.all(10),
           child: Row(
@@ -97,6 +98,22 @@ class MemberList extends StatelessWidget{
           ),
         ),
       ),
+    );
+  }
+}
+
+class MemberProfile extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.close, color: Colors.black),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
+        backgroundColor: Colors.white,
+      ),
+      body: Profile()
     );
   }
 }

@@ -66,7 +66,7 @@ class _Profile extends State<Profile> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text("Interests", style: TextStyle(fontWeight: FontWeight.bold),),
-                              showInterest? Icon(Icons.arrow_drop_down): Icon(Icons.arrow_drop_up)
+                              showInterest? Icon(Icons.arrow_drop_up): Icon(Icons.arrow_drop_down)
                             ],
                           ),
                         ),
@@ -74,7 +74,7 @@ class _Profile extends State<Profile> {
                     ),
 
                     // badges
-                    //TODO: ganti jadi sangat fleksibel gitu
+                    //TODO: tambah chip
                     Visibility(
                       visible: showInterest,
                       child: Container(
@@ -100,7 +100,7 @@ class _Profile extends State<Profile> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text("Skills", style: TextStyle(fontWeight: FontWeight.bold),),
-                                showSkills? Icon(Icons.arrow_drop_down): Icon(Icons.arrow_drop_up)
+                                showSkills? Icon(Icons.arrow_drop_up): Icon(Icons.arrow_drop_down)
                               ],
                             ),
                           ),
@@ -108,7 +108,7 @@ class _Profile extends State<Profile> {
                       ),
 
                       // badges
-                      //TODO: ganti jadi sangat fleksibel gitu
+                      //TODO: tambah chip
                       Visibility(
                           visible: showSkills,
                           child: Container(
@@ -134,7 +134,7 @@ class _Profile extends State<Profile> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text("Achievements", style: TextStyle(fontWeight: FontWeight.bold),),
-                                showAchv? Icon(Icons.arrow_drop_down): Icon(Icons.arrow_drop_up)
+                                showAchv? Icon(Icons.arrow_drop_up): Icon(Icons.arrow_drop_down)
                               ],
                             ),
                           ),
@@ -142,7 +142,7 @@ class _Profile extends State<Profile> {
                       ),
 
                       // badges
-                      //TODO: ganti jadi sangat fleksibel gitu
+                      //TODO: tambah chip
                       Visibility(
                           visible: showAchv,
                           child: Container(
