@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'bulletin.dart';
+import 'chat.dart';
 
 class Home extends StatelessWidget {
 
@@ -41,58 +42,6 @@ class Home extends StatelessWidget {
         // TODO: rekomendasi lomba
 
       ],
-    );
-  }
-}
-
-class ChatHeader extends StatelessWidget{
-  @override
-  Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => ChatScreen())),
-      child: Container(
-        padding: EdgeInsets.fromLTRB(8, 10, 8, 10),
-        child: Row(
-          children: [
-            CircleAvatar(backgroundColor: Colors.white10, backgroundImage: AssetImage('images/pp.png')),
-            SizedBox(width: 10),
-            Container(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text("Orang", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-                  Text("Hi!")
-                ],
-              ),
-            )
-          ],
-
-        ),
-      )
-    );
-  }
-}
-
-class ChatScreen extends StatefulWidget{
-  // TODO: chatscreen
-  @override
-  _ChatScreen createState() => _ChatScreen();
-}
-
-class _ChatScreen extends State<ChatScreen>{
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back_ios_outlined, color: Colors.black),
-          onPressed: () => Navigator.of(context).pop(),
-        ),
-        title: Text("Orang"),
-        backgroundColor: Colors.white,
-      ),
-
-      body: Container()
     );
   }
 }

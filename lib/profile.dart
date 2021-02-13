@@ -41,6 +41,7 @@ class _Profile extends State<Profile> {
                     children: [
                       CircleAvatar(
                         radius: 50,
+                        backgroundColor: Colors.black12,
                         backgroundImage: AssetImage('images/pp.png')
                       ),
                       Text("Firstname Lastname", style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold)),
@@ -74,12 +75,19 @@ class _Profile extends State<Profile> {
                     ),
 
                     // badges
-                    //TODO: tambah chip
                     Visibility(
                       visible: showInterest,
                       child: Container(
-                        height: 10,
-                        color: Colors.purple,
+                        //height: 10,
+                        //color: Colors.purple,
+                        child: Row(
+                          children: [
+                            Chip(label: Text("Robotics")),
+                            Chip(label: Text("Business")),
+                            Chip(label: Text("Computer Science")),
+                            Chip(label: Text("Interaction Design")),
+                          ],
+                        ),
                       )
                     ),
 
@@ -108,12 +116,19 @@ class _Profile extends State<Profile> {
                       ),
 
                       // badges
-                      //TODO: tambah chip
                       Visibility(
                           visible: showSkills,
                           child: Container(
-                            height: 10,
-                            color: Colors.blue,
+                            //height: 10,
+                            //color: Colors.blue,
+                            child: Row(
+                              children: [
+                                Chip(label: Text("Mathematics")),
+                                Chip(label: Text("Sosial Science")),
+                                Chip(label: Text("Graphic Design")),
+                                Chip(label: Text("UI/UX")),
+                              ],
+                            ),
                           )
                       ),
 
@@ -142,12 +157,14 @@ class _Profile extends State<Profile> {
                       ),
 
                       // badges
-                      //TODO: tambah chip
                       Visibility(
                           visible: showAchv,
                           child: Container(
-                            height: 10,
-                            color: Colors.green,
+                            padding: EdgeInsets.all(8),
+                            alignment: Alignment.centerLeft,
+                            //height: 10,
+                            //color: Colors.green,
+                            child: Text("- 1st Achievement\n- 2nd Achievement\n- 3rd Achievement\n...")
                           )
                       ),
 
@@ -157,6 +174,18 @@ class _Profile extends State<Profile> {
 
             ]
           ),
+    );
+  }
+}
+
+class MyBullet extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return new Container(
+      decoration: new BoxDecoration(
+        color: Colors.black,
+        shape: BoxShape.circle,
+      ),
     );
   }
 }

@@ -88,7 +88,7 @@ class MemberList extends StatelessWidget{
               Container(
                 child: Row(
                   children: [
-                    CircleAvatar(backgroundImage: AssetImage('images/pp.png'),),
+                    CircleAvatar(backgroundColor: Colors.black12, backgroundImage: AssetImage('images/pp.png'),),
                     Text("Member", style: TextStyle(fontWeight: FontWeight.bold),),
                   ],
                 )
