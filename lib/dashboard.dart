@@ -73,7 +73,7 @@ class _Dashboard extends State<Dashboard> {
 
               BottomNavigationBarItem(
                 icon: Icon(Icons.search, color: Colors.white.withOpacity(1)),
-                label: "Find Partner",
+                label: "Find",
               ),
 
               BottomNavigationBarItem(

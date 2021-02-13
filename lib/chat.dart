@@ -53,19 +53,49 @@ class _ChatScreen extends State<ChatScreen>{
 
   @override
   Widget build(BuildContext context) {
-    // TODO: chatscreen
 
     return Scaffold(
       backgroundColor: Colors.black12,
       appBar: AppBar(
-        elevation: 0,
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back_ios_outlined, color: Colors.black),
-          onPressed: () => Navigator.of(context).pop(),
+      elevation: 0,
+      automaticallyImplyLeading: false,
+      backgroundColor: Colors.white,
+      flexibleSpace: SafeArea(
+        child: Container(
+          padding: EdgeInsets.only(right: 16),
+          child: Row(
+            children: <Widget>[
+              IconButton(
+                padding: EdgeInsets.only(left: 20),
+                onPressed: (){
+                  Navigator.pop(context);
+                },
+                icon: Icon(Icons.arrow_back_ios,color: Colors.black,),
+              ),
+              SizedBox(width: 2,),
+              CircleAvatar(
+                backgroundColor: Colors.black12,
+                backgroundImage: AssetImage("images/pp.png"),
+                maxRadius: 20,
+              ),
+              SizedBox(width: 12,),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Text("Orang",style: TextStyle( fontSize: 16 ,fontWeight: FontWeight.w600),),
+                    SizedBox(height: 6,),
+                    Text("Online",style: TextStyle(color: Colors.grey.shade600, fontSize: 13),),
+                  ],
+                ),
+              ),
+              Icon(Icons.more_vert,color: Colors.black54,),
+            ],
+          ),
         ),
-        title: Text("Orang", style: TextStyle(color: Colors.black)),
-        backgroundColor: Colors.white,
       ),
+    ),
 
       // dari fcc h3h3 https://www.freecodecamp.org/news/build-a-chat-app-ui-with-flutter/
       body: Stack(
