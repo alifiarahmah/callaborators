@@ -104,4 +104,9 @@ class _Dashboard extends State<Dashboard> {
     );
   }
 
+  // TODO: match sama color scheme pitch deck + tambah logo di floatingactionbutton
+  // TODO: cantikin README.md
+  // Biru 0E97BC, oren E89B18
+  // TODO: bikin mockup & splash screen
+
 }

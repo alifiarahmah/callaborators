@@ -2,7 +2,8 @@
 
 Call-A-Borators prototype by 1.60934 Kilo for Mile Zero Project
 
-Live Demo: coming soon
+Live Web Demo: [Link](https://wonderful-smoke-08182120f.azurestaticapps.net/)
+APK Release: [Link](https://github.com/alifiarahmah/callaborators/raw/main/build/app/outputs/flutter-apk/app-release.apk)
 
 <!-- ## Getting Started
 

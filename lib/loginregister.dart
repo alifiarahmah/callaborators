@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
 import 'dashboard.dart';
+import 'interest.dart';
 
 class Register extends StatefulWidget {
   @override
@@ -28,7 +28,7 @@ class _RegisterState extends State<Register>{
                 ),
 
                 Container(
-                  width: MediaQuery.of(context).size.width * 0.8,
+                  width: MediaQuery.of(context).size.width * 0.6,
                   child: Column(
                     children: [
                       TextField(
@@ -54,7 +54,7 @@ class _RegisterState extends State<Register>{
                         decoration: InputDecoration(
                           border: OutlineInputBorder(),
                           hintText: 'Password',
-                          suffix: InkWell(
+                          suffixIcon: InkWell(
                             onTap: _togglePasswordView,
                             child: Icon(Icons.visibility),
                           ),
@@ -64,7 +64,8 @@ class _RegisterState extends State<Register>{
                       SizedBox(height: 10),
 
                       ButtonTheme(
-                          minWidth: MediaQuery.of(context).size.width * 0.7,
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                          minWidth: MediaQuery.of(context).size.width * 0.6,
                           height: 50.0,
                           child: Column(
                             children: [
@@ -73,11 +74,25 @@ class _RegisterState extends State<Register>{
                                 onPressed: (){
                                   Navigator.push(
                                       context,
-                                      MaterialPageRoute(builder: (context) => Dashboard()) // backend auth di sini
+                                      MaterialPageRoute(builder: (context) => Interest()) // backend auth di sini
                                   );
                                 },
-                                color: Colors.black,
+                                color: Color(0xFF0E97BC),
                                 child: Text('Register', style: TextStyle(color: Colors.white, fontSize: 15),
+                                ),
+                              ),
+
+                              SizedBox(height: 10),
+
+                              RaisedButton(
+                                onPressed: (){
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(builder: (context) => Dashboard()) // backen Auth di sini
+                                  );
+                                },
+                                color: Colors.white,
+                                child: Text('Continue with Google', style: TextStyle(color: Colors.black, fontSize: 15),
                                 ),
                               ),
 
@@ -141,7 +156,7 @@ class _LoginState extends State<Login>{
                 ),
 
                 Container(
-                  width: MediaQuery.of(context).size.width * 0.7,
+                  width: MediaQuery.of(context).size.width * 0.6,
                   child: Column(
                     children: [
                       TextField(
@@ -158,7 +173,7 @@ class _LoginState extends State<Login>{
                         decoration: InputDecoration(
                           border: OutlineInputBorder(),
                           hintText: 'Password',
-                          suffix: InkWell(
+                          suffixIcon: InkWell(
                             onTap: _togglePasswordView,
                             child: Icon(Icons.visibility),
                           ),
@@ -168,7 +183,8 @@ class _LoginState extends State<Login>{
                       SizedBox(height: 10),
 
                       ButtonTheme(
-                          minWidth: 300.0,
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                          minWidth: MediaQuery.of(context).size.width * 0.6,
                           height: 50.0,
                           child: Column(
                             children: [
@@ -180,7 +196,7 @@ class _LoginState extends State<Login>{
                                       MaterialPageRoute(builder: (context) => Dashboard()) // backen Auth di sini
                                   );
                                 },
-                                color: Colors.black,
+                                color: Color(0xFF0E97BC),
                                 child: Text('Log In', style: TextStyle(color: Colors.white, fontSize: 15),
                                 ),
                               ),
@@ -205,15 +221,15 @@ class _LoginState extends State<Login>{
                                 onPressed: () {
                                   Navigator.push(
                                       context,
-                                      MaterialPageRoute(builder: (context) => Login())
+                                      MaterialPageRoute(builder: (context) => Register())
                                   );
                                 },
                                 child: Text("Don't have any account?", style: TextStyle(color: Colors.black, decoration: TextDecoration.underline)),
                               )
 
-                            ],
+                          ],
 
-                          )
+                        )
                       ),
                     ],
                   ),

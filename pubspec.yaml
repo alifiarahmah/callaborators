@@ -23,6 +23,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  sliding_sheet: ^0.4.1
   responsive_grid: ^1.2.1+1
 
 

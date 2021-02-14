@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'bulletin.dart';
 import 'chat.dart';
+import 'idea.dart';
 import 'teamsearch.dart';
 
 class Home extends StatefulWidget {
@@ -116,7 +117,7 @@ class _Home extends State<Home> {
             color: Colors.grey,
           ),
           child: InkWell(
-            //onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => TeamSearch())),
+            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => IdeaGen())),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -128,7 +129,7 @@ class _Home extends State<Home> {
                   ],
                 ),
 
-                Icon(Icons.lightbulb)
+                Icon(Icons.lightbulb_outlined,)
               ],
             ),
           ),
@@ -138,8 +139,6 @@ class _Home extends State<Home> {
 
         Text("Recommended competition for you", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
         LombaList(), LombaList(), LombaList()
-
-        // TODO: bikin mockup
 
       ],
     );
