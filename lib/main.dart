@@ -8,7 +8,7 @@ import 'interest.dart';
 void main() {
   runApp(MaterialApp(
       title: 'Call-A-Borators UI',
-      home: Intro() //TODO: ganti lagi jadi homenya intro pas build hihi mangatt
+      home: Dashboard() //TODO: ganti lagi jadi homenya intro pas build hihi mangatt
   ));
 }
 
@@ -27,7 +27,7 @@ class Intro extends StatelessWidget {
 
           SizedBox(height: 10),
 
-          Text("Ready to meet your desired partners?"),
+          Text("Ready to meet your dream partners?"),
 
           SizedBox(height: 30),
 

@@ -23,20 +23,25 @@ class _Home extends State<Home> {
     }
 
     var hourNow = int.parse(DateTime.now().hour.toString());
-    var greet = "";
-    var daypic = "";
+    var greet = "", daypic = "";
+    Color bgclor = Colors.white, txtclor = Colors.black;
     if(hourNow < 12){
       greet = "Selamat pagi";
-      daypic = 'images/morningevening.png';
+      daypic = 'images/morningaftnoon.png';
+      bgclor = Colors.yellow;
     } else if(hourNow < 16){
       greet = "Selamat siang";
       daypic = 'images/noon.png';
+      bgclor = Colors.lightBlueAccent;
     } else if(hourNow < 18){
       greet = "Selamat sore";
       daypic = 'images/morningaftnoon.png';
+      bgclor = Colors.yellow;
     } else{
       greet = "Selamat malam";
       daypic = 'images/night.png';
+      bgclor = Colors.black;
+      txtclor = Colors.white;
     }
 
     return ListView(
@@ -47,15 +52,14 @@ class _Home extends State<Home> {
           padding: EdgeInsets.all(20),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
-            color: Colors.grey,
+            color: bgclor,
           ),
 
           // greeting
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text("$greet, Firstname lastname.", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
-              // image
+              Text("$greet, Firstname lastname.", style: TextStyle(color: txtclor, fontWeight: FontWeight.bold, fontSize: 18)),
               Image.asset(daypic, height: MediaQuery.of(context).size.height * 0.05,)
             ],
           ),
@@ -63,12 +67,9 @@ class _Home extends State<Home> {
 
         SizedBox(height: 20),
 
-        // chat2 sama kenalan
-        Text("Chats", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+        // chat2 sama kenalan was here
+        /*Text("Chats", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
         ChatHeader(), ChatHeader(),ChatHeader(),ChatHeader(),
-        Visibility(
-          child: Column(
-            children: [
               ChatHeader(),ChatHeader(),ChatHeader(),ChatHeader(),ChatHeader(),
             ],
           ),
@@ -80,7 +81,7 @@ class _Home extends State<Home> {
           onPressed: switchAllChats,
         ),
 
-        SizedBox(height: 20,),
+        SizedBox(height: 20,),*/
 
         Container(
           padding: EdgeInsets.all(20),

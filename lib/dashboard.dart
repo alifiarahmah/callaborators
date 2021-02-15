@@ -1,8 +1,10 @@
 //import 'dart.js';
 
+import 'package:callaborators/chat.dart';
 import 'package:flutter/material.dart';
 
 import 'home.dart';
+import 'chat.dart';
 import 'guild.dart';
 import 'teamsearch.dart';
 import 'bulletin.dart';
@@ -16,14 +18,14 @@ class Dashboard extends StatefulWidget {
 class _Dashboard extends State<Dashboard> {
 
   int _selectedIndex = 0;
-  static const WidgetsName = ["Home", "Guild", " ", "Bulletin", "Profile"];
-  static List<Widget> _widgetOptions = <Widget> [Home(), Guild(), null, Bulletin(), Profile()];
+  static const WidgetsName = ["Home", "Chats", "Guild", "Bulletin", "Profile"];
+  static List<Widget> _widgetOptions = <Widget> [Home(), ChatList(), Guild(), Bulletin(), Profile()];
   void _onItemTapped(int index){
-    if (index != 2){
+    //if (index != 2){
       setState(() {
         _selectedIndex = index;
       });
-    }
+    //}
   }
 
   @override
@@ -32,9 +34,9 @@ class _Dashboard extends State<Dashboard> {
       home: DefaultTabController(
         length: 2,
         child: Scaffold(
-
+          backgroundColor: Colors.white,
           appBar: AppBar(
-            backgroundColor: Colors.black,
+            backgroundColor: Color(0xFF0E97BC),
             bottom: (_selectedIndex == 3) ? TabBar(
               tabs: [
                 Tab(text: 'Suggested'),
@@ -52,7 +54,7 @@ class _Dashboard extends State<Dashboard> {
           ),
 
           bottomNavigationBar: BottomNavigationBar(
-            backgroundColor: Colors.white,
+            backgroundColor: Color(0xFFE89B18),
             showUnselectedLabels: true,
             selectedItemColor: Colors.black,
             unselectedItemColor: Colors.black38,
@@ -67,13 +69,13 @@ class _Dashboard extends State<Dashboard> {
               ),
 
               BottomNavigationBarItem(
-                icon: Icon(Icons.group),
-                label: "Guild",
+                icon: Icon(Icons.chat),
+                label: "Chats",
               ),
 
               BottomNavigationBarItem(
-                icon: Icon(Icons.search, color: Colors.white.withOpacity(1)),
-                label: "Find",
+                icon: Icon(Icons.group),
+                label: "Guild",
               ),
 
               BottomNavigationBarItem(
@@ -91,22 +93,32 @@ class _Dashboard extends State<Dashboard> {
             onTap: _onItemTapped,
           ),
 
-          floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+          //floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
 
           floatingActionButton: FloatingActionButton(
+            backgroundColor: Colors.white,
             onPressed: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) => TeamSearch()));
             },
-            child: Icon(Icons.search),
+            child: ConstrainedBox(
+              constraints: BoxConstraints.expand(),
+              child: Padding(
+                padding: EdgeInsets.all(10),
+                child: Image.asset('images/logo.png'),
+              ),
+            ),
           ),
         )
       )
     );
   }
 
-  // TODO: match sama color scheme pitch deck + tambah logo di floatingactionbutton
-  // TODO: cantikin README.md
-  // Biru 0E97BC, oren E89B18
-  // TODO: bikin mockup & splash screen
+// TODO: match sama color scheme pitch deck
+// TODO: bikin box find your dream teammate dan lacking for ideas jadi row
+// TODO: tambahin popup pilihan ideagen/teamsearch pas pencet FAB logo
+
+// TODO: cantikin README.md
+// Biru 0E97BC, oren E89B18
+// TODO: bikin mockup & splash screen
 
 }

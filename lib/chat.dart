@@ -7,6 +7,19 @@ class ChatMessage{
   ChatMessage({@required this.messageContent, @required this.messageType});
 }
 
+class ChatList extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      children: [
+        Text("Chats", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+        ChatHeader(), ChatHeader(),ChatHeader(),ChatHeader(),
+        ChatHeader(),ChatHeader(),ChatHeader(),ChatHeader(),ChatHeader(),
+      ],
+    );
+  }
+}
+
 class ChatHeader extends StatelessWidget{
   @override
   Widget build(BuildContext context) {

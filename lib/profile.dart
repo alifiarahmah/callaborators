@@ -136,7 +136,7 @@ class _Profile extends State<Profile> {
                   )
               ),
 
-              // Achievements
+              // TODO: ganti Achievements jadi Experiences, atau digabung aja?
               Container(
                   child: Column(
                     children: [
@@ -148,7 +148,7 @@ class _Profile extends State<Profile> {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Text("Achievements", style: TextStyle(fontWeight: FontWeight.bold),),
+                                Text("Experiences", style: TextStyle(fontWeight: FontWeight.bold),),
                                 showAchv? Icon(Icons.arrow_drop_up): Icon(Icons.arrow_drop_down)
                               ],
                             ),

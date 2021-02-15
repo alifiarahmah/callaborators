@@ -1,9 +1,25 @@
 # Call-A-Borators
 
-Call-A-Borators prototype by 1.60934 Kilo for Mile Zero Project
+## Demo
+[Web Demo](https://wonderful-smoke-08182120f.azurestaticapps.net/) <br>
+[APK Release](https://github.com/alifiarahmah/callaborators/raw/main/build/app/outputs/flutter-apk/app-release.apk)
 
-Live Web Demo: [Link](https://wonderful-smoke-08182120f.azurestaticapps.net/)
-APK Release: [Link](https://github.com/alifiarahmah/callaborators/raw/main/build/app/outputs/flutter-apk/app-release.apk)
+## About
+Call-A-Borators prototype by 1.60934 Kilo for Mile Zero Project. <br>
+Call-A-Borators is a collaborating tool dedicated for searching partners to build a dream team.
+
+## Features
+### Teammate Search
+Search partners for your team by considering your interest, skills, and experiences,
+to build a great team.
+### Idea Generator
+A tool to give you inspiration for your next project.
+Not literally generating ideas, but it will help you generate ideas by yourself
+because idea could come from anywhere, really.
+### Bulletin
+Feeling ambitious to do your next project? You can check this lists to fulfill your
+thirst of doing projects.
+### etc.
 
 <!-- ## Getting Started
 
