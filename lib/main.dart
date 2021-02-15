@@ -1,9 +1,10 @@
-import 'package:callaborators/teamsearch.dart';
 import 'package:flutter/material.dart';
 
 import 'loginregister.dart';
 import 'dashboard.dart';
 import 'interest.dart';
+
+// TODO: OVERALL UDAH YEYY, TINGGAL GANTI VARIABEL LOKAL2AN MANGATTT
 
 void main() {
   runApp(MaterialApp(

@@ -2,8 +2,6 @@
 
 import 'package:callaborators/chat.dart';
 import 'package:callaborators/idea.dart';
-import 'package:floating_action_bubble/floating_action_bubble.dart';
-import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:flutter/material.dart';
 import 'package:sliding_sheet/sliding_sheet.dart';
 
@@ -91,9 +89,7 @@ class _Dashboard extends State<Dashboard> with SingleTickerProviderStateMixin{
               },
             );
           }
-      );
-
-      print(result); // This is the result.
+      ); // This is the result.
     }
 
     //setup speedial
@@ -181,117 +177,6 @@ class _Dashboard extends State<Dashboard> with SingleTickerProviderStateMixin{
               ),
             ),
           ),
-
-          // speed dial
-          /*
-          SpeedDial(
-            /// both default to 16
-            marginEnd: 18,
-            marginBottom: 20,
-            // animatedIcon: AnimatedIcons.menu_close,
-            // animatedIconTheme: IconThemeData(size: 22.0),
-            /// This is ignored if animatedIcon is non null
-            //icon: Icons.add,
-            //activeIcon: Icons.remove,
-            //iconTheme: IconThemeData(color: Colors.grey[50], size: 30),
-            /// The label of the main button.
-            // label: Text("Open Speed Dial"),
-            /// The active label of the main button, Defaults to label if not specified.
-            // activeLabel: Text("Close Speed Dial"),
-            /// Transition Builder between label and activeLabel, defaults to FadeTransition.
-            // labelTransitionBuilder: (widget, animation) => ScaleTransition(scale: animation,child: widget),
-            /// The below button size defaults to 56 itself, its the FAB size + It also affects relative padding and other elements
-            buttonSize: 56.0,
-            visible: true,
-            /// If true user is forced to close dial manually
-            /// by tapping main button and overlay is not rendered.
-            closeManually: false,
-            /// If true overlay will render no matter what.
-            renderOverlay: false,
-            curve: Curves.bounceIn,
-            overlayColor: Colors.black,
-            overlayOpacity: 0.5,
-            //onOpen: () => print('OPENING DIAL'),
-            //onClose: () => print('DIAL CLOSED'),
-            tooltip: 'Speed Dial',
-            heroTag: 'speed-dial-hero-tag',
-            backgroundColor: Colors.white,
-            foregroundColor: Colors.black,
-            elevation: 8.0,
-            shape: CircleBorder(),
-            // orientation: SpeedDialOrientation.Up,
-            // childMarginBottom: 2,
-            // childMarginTop: 2,
-            children: [
-              SpeedDialChild(
-                child: Icon(Icons.person_add),
-                backgroundColor: Colors.blue,
-                label: 'Teammate Search',
-                labelStyle: TextStyle(color: Colors.white, fontSize: 18.0),
-                onTap: () => print('SECOND CHILD'),
-              ),
-              SpeedDialChild(
-                child: Icon(Icons.lightbulb),
-                backgroundColor: Colors.green,
-                label: 'Idea Generator',
-                labelStyle: TextStyle(color: Colors.white, fontSize: 18.0),
-                onTap: () => print('THIRD CHILD'),
-              ),
-            ],
-          ),
-           */
-
-          // floatingactionbubble
-          /*
-          FloatingActionBubble(
-            items: [
-              Bubble(
-                title: "Teammate Search",
-                icon: Icons.person_add,
-                iconColor: Color(0xFFE89B18),
-                bubbleColor: Colors.white,
-                titleStyle:TextStyle(fontSize: 16 , color: Color(0xFFE89B18)),
-                onPress: () {
-                  Navigator.push(context, new MaterialPageRoute(builder: (BuildContext context) => TeamSearch()));
-                  _animationController.reverse();
-                },
-              ),
-              Bubble(
-                title: "Idea Generator",
-                icon: Icons.lightbulb,
-                iconColor: Color(0xFFE89B18),
-                bubbleColor: Colors.white,
-                titleStyle:TextStyle(fontSize: 16 , color: Color(0xFFE89B18)),
-                onPress: () {
-                  Navigator.push(context, new MaterialPageRoute(builder: (BuildContext context) => IdeaGen()));
-                  _animationController.reverse();
-                },
-              )
-            ],
-            animation: _animation,
-            onPress: _animationController.isCompleted? _animationController.reverse: _animationController.forward,
-            iconColor: Colors.blue,
-            animatedIconData: AnimatedIcons.ellipsis_search,
-            backGroundColor: Colors.white,
-          )
-          */
-
-          // floatingactionbutton
-          /*
-          FloatingActionButton(
-            backgroundColor: Colors.white,
-            onPressed: () {
-              //Navigator.push(context, MaterialPageRoute(builder: (context) => TeamSearch()));
-            },
-            child: ConstrainedBox(
-              constraints: BoxConstraints.expand(),
-              child: Padding(
-                padding: EdgeInsets.all(13),
-                child: Image.asset('images/logo.png'),
-              ),
-            ),
-          ),
-          */
         )
       )
     );
@@ -299,6 +184,5 @@ class _Dashboard extends State<Dashboard> with SingleTickerProviderStateMixin{
 
 
 // Biru 0E97BC, oren E89B18
-// TODO: bikin mockup & splash screen
 
 }

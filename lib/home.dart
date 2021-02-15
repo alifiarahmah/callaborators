@@ -110,7 +110,6 @@ class _Home extends State<Home> {
 
         SizedBox(height: 20,),
 
-        // TODO: buat screen idea generator
         Container(
           padding: EdgeInsets.all(20),
           decoration: BoxDecoration(

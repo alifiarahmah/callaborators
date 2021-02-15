@@ -146,17 +146,17 @@ class SearchResult extends StatelessWidget {
   Widget build(BuildContext context){
 
     return Scaffold(
+      backgroundColor: Colors.grey,
       body: Container(
-        padding: EdgeInsets.fromLTRB(MediaQuery.of(context).size.width * 0.1, MediaQuery.of(context).size.height * 0.15, MediaQuery.of(context).size.width * 0.1, 0),
         height: MediaQuery.of(context).size.height * 0.9,
         child: ListView(
+          padding: EdgeInsets.all(MediaQuery.of(context).size.height*0.05),
           scrollDirection: Axis.horizontal,
           children: [
             // card here
 
-            NameCard(),
-            NameCard(),
-            NameCard()
+            NameCard1(),
+            NameCard2(),
 
             // card kelar here
 
@@ -169,9 +169,7 @@ class SearchResult extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.arrow_back_rounded, color: Colors.black),
         backgroundColor: Colors.white,
-        onPressed: (){
-          Navigator.pop(context, '');
-        },
+        onPressed: () => Navigator.of(context).pop(),
       )
 
     );

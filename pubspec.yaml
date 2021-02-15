@@ -25,8 +25,8 @@ dependencies:
     sdk: flutter
   sliding_sheet: ^0.4.1
   responsive_grid: ^1.2.1+1
-  floating_action_bubble: 1.1.2
-  flutter_speed_dial: ^2.1.1
+  english_words: ^3.1.5
+  random_words: ^1.0.2
 
 
   # The following adds the Cupertino Icons font to your application.

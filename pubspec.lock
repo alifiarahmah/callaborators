@@ -78,6 +78,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.0"
+  english_words:
+    dependency: "direct main"
+    description:
+      name: english_words
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.1.5"
   fake_async:
     dependency: transitive
     description:
@@ -85,13 +92,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.2.0-nullsafety.1"
-  floating_action_bubble:
-    dependency: "direct main"
-    description:
-      name: floating_action_bubble
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.1.2"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -104,13 +104,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.7.5"
-  flutter_speed_dial:
-    dependency: "direct main"
-    description:
-      name: flutter_speed_dial
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.1.1"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -151,6 +144,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.1.0"
+  random_words:
+    dependency: "direct main"
+    description:
+      name: random_words
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.2"
   responsive_grid:
     dependency: "direct main"
     description:
