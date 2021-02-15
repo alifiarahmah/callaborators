@@ -108,10 +108,10 @@ class MemberProfile extends StatelessWidget{
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.close, color: Colors.black),
+          icon: Icon(Icons.close, color: Colors.white),
           onPressed: () => Navigator.of(context).pop(),
         ),
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xFF0E97BC),
       ),
       body: Profile()
     );

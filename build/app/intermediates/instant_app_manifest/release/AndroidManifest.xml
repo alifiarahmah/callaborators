@@ -12,7 +12,7 @@
     <application
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:icon="@mipmap/ic_launcher"
-        android:label="callaborators" >
+        android:label="Call-A-Borators" >
         <activity
             android:name="com.team160934kilo.callaborators.callaborators.MainActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"

@@ -1,4 +1,4 @@
-#Mon Feb 15 09:58:05 ICT 2021
+#Mon Feb 15 18:34:23 ICT 2021
 base.0=C\:\\Users\\alifi\\Proyekan\\callaborators\\build\\app\\intermediates\\transforms\\r8\\release\\0\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

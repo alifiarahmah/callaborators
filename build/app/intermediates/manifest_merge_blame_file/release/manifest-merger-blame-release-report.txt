@@ -16,8 +16,8 @@
 12-->[androidx.core:core:1.1.0] C:\Users\alifi\.gradle\caches\transforms-2\files-2.1\a528b13ac93e64cafa3d0480e2c93207\core-1.1.0\AndroidManifest.xml:24:18-86
 13        android:icon="@mipmap/ic_launcher"
 13-->C:\Users\alifi\Proyekan\callaborators\android\app\src\main\AndroidManifest.xml:5:9-43
-14        android:label="callaborators" >
-14-->C:\Users\alifi\Proyekan\callaborators\android\app\src\main\AndroidManifest.xml:4:9-38
+14        android:label="Call-A-Borators" >
+14-->C:\Users\alifi\Proyekan\callaborators\android\app\src\main\AndroidManifest.xml:4:9-40
 15        <activity
 15-->C:\Users\alifi\Proyekan\callaborators\android\app\src\main\AndroidManifest.xml:6:9-34:20
 16            android:name="com.team160934kilo.callaborators.callaborators.MainActivity"

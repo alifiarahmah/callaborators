@@ -136,7 +136,6 @@ class _Profile extends State<Profile> {
                   )
               ),
 
-              // TODO: ganti Achievements jadi Experiences, atau digabung aja?
               Container(
                   child: Column(
                     children: [

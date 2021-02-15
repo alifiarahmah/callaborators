@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.team160934kilo.callaborators.callaborators">
    <application
-        android:label="callaborators"
+        android:label="Call-A-Borators"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

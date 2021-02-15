@@ -87,7 +87,7 @@ class _Home extends State<Home> {
           padding: EdgeInsets.all(20),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
-            color: Colors.grey,
+            color: Colors.lightBlueAccent,
           ),
           child: InkWell(
             onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => TeamSearch())),
@@ -115,7 +115,7 @@ class _Home extends State<Home> {
           padding: EdgeInsets.all(20),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
-            color: Colors.grey,
+            color: Colors.orangeAccent,
           ),
           child: InkWell(
             onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => IdeaGen())),

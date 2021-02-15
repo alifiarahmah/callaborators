@@ -8,7 +8,7 @@ import 'interest.dart';
 void main() {
   runApp(MaterialApp(
       title: 'Call-A-Borators UI',
-      home: Dashboard() //TODO: ganti lagi jadi homenya intro pas build hihi mangatt
+      home: Intro() //TODO: ganti lagi jadi homenya intro pas build hihi mangatt
   ));
 }
 

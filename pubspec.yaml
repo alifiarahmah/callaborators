@@ -25,11 +25,15 @@ dependencies:
     sdk: flutter
   sliding_sheet: ^0.4.1
   responsive_grid: ^1.2.1+1
+  floating_action_bubble: 1.1.2
+  flutter_speed_dial: ^2.1.1
 
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.0
+
+  flutter_launcher_icons: ^0.7.4
 
 dev_dependencies:
   flutter_test:
@@ -75,3 +79,8 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
+flutter_icons:
+  image_path: "images/logo_rounded.png"
+  android: true
+  ios: true
