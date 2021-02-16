@@ -20,8 +20,7 @@ Feeling ambitious to do your next project?
 You can check this lists to fulfill your thirst of doing projects.
 ### Guild
 A service dedicated for team management. 
-You can add partnerto your team by Teammate Search.
-### etc.
+You can add partner to your team by Teammate Search.
 
 <!-- ## Getting Started
 
