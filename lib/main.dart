@@ -5,9 +5,11 @@ import 'dashboard.dart';
 import 'interest.dart';
 
 // TODO: OVERALL UDAH YEYY, TINGGAL GANTI VARIABEL LOKAL2AN MANGATTT
+// TODO: KALO ADA WAKTU LAGI RAPIIN LAYOUTNYA + PERBAIKI VIEW DI HP
 
 void main() {
   runApp(MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Call-A-Borators UI',
       home: Intro() //TODO: ganti lagi jadi homenya intro pas build hihi mangatt
   ));

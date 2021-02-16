@@ -1,3 +1,5 @@
+import 'package:callaborators/guild.dart';
+import 'package:callaborators/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -64,6 +66,17 @@ class _ChatScreen extends State<ChatScreen>{
     ChatMessage(messageContent: "A competition? Sounds interesting. \nWhat competition do you want to join?", messageType: "receiver"),
   ];
 
+  // Create a text controller and use it to retrieve the current value
+  // of the TextField.
+  final myController = TextEditingController();
+
+  @override
+  void dispose() {
+    // Clean up the controller when the widget is disposed.
+    myController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
 
@@ -93,17 +106,20 @@ class _ChatScreen extends State<ChatScreen>{
               ),
               SizedBox(width: 12,),
               Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Text("Orang",style: TextStyle( fontSize: 16 ,fontWeight: FontWeight.w600),),
-                    SizedBox(height: 6,),
-                    Text("Online",style: TextStyle(color: Colors.grey.shade600, fontSize: 13),),
-                  ],
-                ),
+                child: InkWell(
+                  onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => MemberProfile()));},
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Text("A Person",style: TextStyle( fontSize: 16 ,fontWeight: FontWeight.w600),),
+                      SizedBox(height: 6,),
+                      Text("Online",style: TextStyle(color: Colors.grey.shade600, fontSize: 13),),
+                    ],
+                  ),
+                )
               ),
-              Icon(Icons.more_vert,color: Colors.black54,),
+              IconButton(icon: Icon(Icons.more_vert,color: Colors.black54), onPressed: (){},),
             ],
           ),
         ),
@@ -115,6 +131,7 @@ class _ChatScreen extends State<ChatScreen>{
         children: <Widget>[
 
           ListView.builder(
+            scrollDirection: Axis.vertical,
             itemCount: messages.length,
             shrinkWrap: true,
             padding: EdgeInsets.only(top: 10,bottom: 10),
@@ -162,6 +179,7 @@ class _ChatScreen extends State<ChatScreen>{
                   SizedBox(width: 15,),
                   Expanded(
                     child: TextField(
+                      controller: myController,
                       decoration: InputDecoration(
                           hintText: "Write message...",
                           hintStyle: TextStyle(color: Colors.black54),
@@ -171,7 +189,11 @@ class _ChatScreen extends State<ChatScreen>{
                   ),
                   SizedBox(width: 15,),
                   FloatingActionButton(
-                    onPressed: (){},
+                    onPressed: () {
+                      messages.add(ChatMessage(messageContent: myController.text, messageType: "sender"));
+                      setState(() {});
+                      myController.text = '';
+                    },
                     child: Icon(Icons.send,color: Colors.white,size: 18,),
                     backgroundColor: Colors.black,
                     elevation: 0,

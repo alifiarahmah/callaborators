@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:random_words/random_words.dart';
+import 'dart:math';
 
 class IdeaGen extends StatefulWidget {
   @override
@@ -11,11 +12,21 @@ class _IdeaGen extends State<IdeaGen> {
   @override
   Widget build(BuildContext context) {
 
-    String randomWords = generateNoun().take(3).toString();
+    var interest = ["robot", "robotic", "IoT", "smart", "smart city", "automatic", "electric", "wireless",
+      "sensor", "speed", "degradeable", "lower", "isolator", "tolerance", "automation", "cable", "docking", "flying",
+      "transparent", "waterproof"];
+    var element = interest[Random().nextInt(interest.length)];
+    String randomWords = element + " + " + (generateNoun().take(3).toString());
 
     changeWords() {
+      // this one will be AI-ed
+      var interest = ["robot", "robotic", "IoT", "smart", "smart city", "automatic", "electric", "wireless",
+        "sensor", "speed", "degradeable", "lower", "isolator", "tolerance", "automation", "cable", "docking", "flying",
+        "transparent", "waterproof"];
+      var element = interest[Random().nextInt(interest.length)];
+      generateNoun();
       setState(() {
-        randomWords = generateNoun().take(3).toString();
+        randomWords = element + " + " + (generateNoun().take(3).toString());
       });
     }
 

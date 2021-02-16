@@ -28,7 +28,7 @@ class _RegisterState extends State<Register>{
                 ),
 
                 Container(
-                  width: MediaQuery.of(context).size.width * 0.6,
+                  width: MediaQuery.of(context).size.width * 0.9,
                   child: Column(
                     children: [
                       TextField(
@@ -65,7 +65,7 @@ class _RegisterState extends State<Register>{
 
                       ButtonTheme(
                           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                          minWidth: MediaQuery.of(context).size.width * 0.6,
+                          minWidth: MediaQuery.of(context).size.width * 0.9,
                           height: 50.0,
                           child: Column(
                             children: [
@@ -92,7 +92,7 @@ class _RegisterState extends State<Register>{
                                   );
                                 },
                                 color: Colors.white,
-                                child: Text('Continue with Google', style: TextStyle(color: Colors.black, fontSize: 15),
+                                child: Text('Continue with Google', textAlign: TextAlign.center, style: TextStyle(color: Colors.black, fontSize: 15),
                                 ),
                               ),
 
@@ -156,7 +156,7 @@ class _LoginState extends State<Login>{
                 ),
 
                 Container(
-                  width: MediaQuery.of(context).size.width * 0.6,
+                  width: MediaQuery.of(context).size.width * 0.9,
                   child: Column(
                     children: [
                       TextField(
@@ -184,7 +184,7 @@ class _LoginState extends State<Login>{
 
                       ButtonTheme(
                           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                          minWidth: MediaQuery.of(context).size.width * 0.6,
+                          minWidth: MediaQuery.of(context).size.width * 0.9,
                           height: 50.0,
                           child: Column(
                             children: [

@@ -26,19 +26,19 @@ class _Home extends State<Home> {
     var greet = "", daypic = "";
     Color bgclor = Colors.white, txtclor = Colors.black;
     if(hourNow < 12){
-      greet = "Selamat pagi";
+      greet = "Good morning";
       daypic = 'images/morningaftnoon.png';
       bgclor = Colors.yellow;
     } else if(hourNow < 16){
-      greet = "Selamat siang";
+      greet = "Good afternoon";
       daypic = 'images/noon.png';
       bgclor = Colors.lightBlueAccent;
     } else if(hourNow < 18){
-      greet = "Selamat sore";
+      greet = "Good afternoon";
       daypic = 'images/morningaftnoon.png';
       bgclor = Colors.yellow;
     } else{
-      greet = "Selamat malam";
+      greet = "Good evening";
       daypic = 'images/night.png';
       bgclor = Colors.black;
       txtclor = Colors.white;

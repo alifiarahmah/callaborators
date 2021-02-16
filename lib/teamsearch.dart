@@ -41,13 +41,18 @@ class TeamSearch extends StatelessWidget {
                           child: ButtonTheme(
                             minWidth: 300.0,
                             height: 50.0,
-                            child: RaisedButton(
-                              color: Colors.black,
-                              child: Text("Start", style: TextStyle(color: Colors.white)),
-                              onPressed: (){
-                                Navigator.push(context, MaterialPageRoute(builder: (context) => Searching()));
-                              },
-                            ),
+                            child: ButtonTheme(
+                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                              minWidth: 300.0,
+                              height: 50.0,
+                              child: RaisedButton(
+                                color: Color(0xFF0E97BC),
+                                child: Text("Start", style: TextStyle(color: Colors.white)),
+                                onPressed: (){
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => Searching()));
+                                },
+                              ),
+                            )
                           )
                         )
                       ],
@@ -148,6 +153,7 @@ class SearchResult extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.grey,
       body: Container(
+        alignment: Alignment.center,
         height: MediaQuery.of(context).size.height * 0.9,
         child: ListView(
           padding: EdgeInsets.all(MediaQuery.of(context).size.height*0.05),
