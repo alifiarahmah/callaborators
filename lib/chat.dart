@@ -1,7 +1,7 @@
 import 'package:callaborators/guild.dart';
-import 'package:callaborators/profile.dart';
+//import 'package:callaborators/profile.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
+//import 'package:flutter/cupertino.dart';
 
 class ChatMessage{
   String messageContent;

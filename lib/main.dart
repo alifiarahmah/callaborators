@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'loginregister.dart';
-import 'dashboard.dart';
-import 'interest.dart';
+//import 'dashboard.dart';
+//import 'interest.dart';
 
 // TODO: OVERALL UDAH YEYY, TINGGAL GANTI VARIABEL LOKAL2AN MANGATTT
 // TODO: KALO ADA WAKTU LAGI RAPIIN LAYOUTNYA + PERBAIKI VIEW DI HP
@@ -41,14 +41,17 @@ class Intro extends StatelessWidget {
             child: Column(
               children: [
 
-                RaisedButton(
+                ElevatedButton(
                   onPressed: (){
                     Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => Register())
                     );
                   },
-                  color: Color(0xFF0E97BC),
+                  //color: Color(0xFF0E97BC),
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor:Color(0xFF0E97BC),
+                  ),
                   child: Text('Start', style: TextStyle(color: Colors.white, fontSize: 18),
                   ),
                 ),

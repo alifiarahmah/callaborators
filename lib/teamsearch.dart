@@ -45,8 +45,11 @@ class TeamSearch extends StatelessWidget {
                               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
                               minWidth: 300.0,
                               height: 50.0,
-                              child: RaisedButton(
-                                color: Color(0xFF0E97BC),
+                              child: ElevatedButton(
+                               // color: Color(0xFF0E97BC),
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor:Color(0xFF0E97BC),
+                                ),
                                 child: Text("Start", style: TextStyle(color: Colors.white)),
                                 onPressed: (){
                                   Navigator.push(context, MaterialPageRoute(builder: (context) => Searching()));

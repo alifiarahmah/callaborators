@@ -163,7 +163,7 @@ class Ready extends StatelessWidget {
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
                 minWidth: 300.0,
                 height: 50.0,
-                child: RaisedButton(
+                child: ElevatedButton(
                   onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => Dashboard()));},
                   child: Text("Go to my dashboard", style: TextStyle(color: Colors.white),),
                 ),

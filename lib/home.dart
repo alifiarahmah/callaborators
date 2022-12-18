@@ -1,7 +1,7 @@
-import 'package:flutter/cupertino.dart';
+//import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'bulletin.dart';
-import 'chat.dart';
+//import 'chat.dart';
 import 'idea.dart';
 import 'teamsearch.dart';
 

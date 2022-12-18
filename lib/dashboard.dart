@@ -7,7 +7,7 @@ import 'package:sliding_sheet/sliding_sheet.dart';
 
 
 import 'home.dart';
-import 'chat.dart';
+//import 'chat.dart';
 import 'guild.dart';
 import 'teamsearch.dart';
 import 'bulletin.dart';

@@ -69,11 +69,11 @@ class NameCard1 extends StatelessWidget {
                   child: ButtonBar(
                     buttonMinWidth: 100,
                     children: [
-                      RaisedButton(
+                      ElevatedButton(
                         child: Icon(Icons.account_circle),
                         onPressed: (){Navigator.push(context,MaterialPageRoute(builder: (context) => MemberProfile()));},
                       ),
-                      RaisedButton(
+                      ElevatedButton(
                         child: Text("Chat"),
                         onPressed: (){Navigator.push(context,MaterialPageRoute(builder: (context) => ChatScreen()));},
                       ),
@@ -157,11 +157,11 @@ class NameCard2 extends StatelessWidget {
                     child: ButtonBar(
                       buttonMinWidth: 100,
                       children: [
-                        RaisedButton(
+                        ElevatedButton(
                           child: Icon(Icons.account_circle),
                           onPressed: (){Navigator.push(context,MaterialPageRoute(builder: (context) => MemberProfile()));},
                         ),
-                        RaisedButton(
+                        ElevatedButton(
                           child: Text("Chat"),
                           onPressed: (){Navigator.push(context,MaterialPageRoute(builder: (context) => ChatScreen()));},
                         ),

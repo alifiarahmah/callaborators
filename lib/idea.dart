@@ -64,14 +64,17 @@ class _IdeaGen extends State<IdeaGen> {
                     height: 50.0,
                     child: Column(
                       children: [
-                        RaisedButton(
+                        ElevatedButton(
                           child: Text("Shuffle!", style: TextStyle(color: Colors.white, fontSize: 16)),
                           onPressed: changeWords,
                         ),
                         SizedBox(height: 10),
-                        RaisedButton(
+                        ElevatedButton(
                           child: Text("Quit"),
-                          color: Colors.white,
+                          // color: Colors.white,
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor:Colors.white
+                          ),
                           onPressed: () => Navigator.of(context).pop(),
                         )
                       ],

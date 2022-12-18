@@ -70,28 +70,34 @@ class _RegisterState extends State<Register>{
                           child: Column(
                             children: [
 
-                              RaisedButton(
+                              ElevatedButton(
                                 onPressed: (){
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(builder: (context) => Interest()) // backend auth di sini
                                   );
                                 },
-                                color: Color(0xFF0E97BC),
+                                //color: Color(0xFF0E97BC),
+                                style: ElevatedButton.styleFrom(
+                                    backgroundColor:Color(0xFF0E97BC)
+                                ),
                                 child: Text('Register', style: TextStyle(color: Colors.white, fontSize: 15),
                                 ),
                               ),
 
                               SizedBox(height: 10),
 
-                              RaisedButton(
+                              ElevatedButton(
                                 onPressed: (){
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(builder: (context) => Dashboard()) // backen Auth di sini
                                   );
                                 },
-                                color: Colors.white,
+                                // color: Colors.white,
+                                style: ElevatedButton.styleFrom(
+                                    backgroundColor:Colors.white
+                                ),
                                 child: Text('Continue with Google', textAlign: TextAlign.center, style: TextStyle(color: Colors.black, fontSize: 15),
                                 ),
                               ),
@@ -189,28 +195,34 @@ class _LoginState extends State<Login>{
                           child: Column(
                             children: [
 
-                              RaisedButton(
+                              ElevatedButton(
                                 onPressed: (){
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(builder: (context) => Dashboard()) // backen Auth di sini
                                   );
                                 },
-                                color: Color(0xFF0E97BC),
+                                // color: Color(0xFF0E97BC),
+                                // // color: Colors.white,
+                                style: ElevatedButton.styleFrom(
+                                    backgroundColor:Color(0xFF0E97BC)
+                                ),
                                 child: Text('Log In', style: TextStyle(color: Colors.white, fontSize: 15),
                                 ),
                               ),
 
                               SizedBox(height: 10),
 
-                              RaisedButton(
+                              ElevatedButton(
                                 onPressed: (){
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(builder: (context) => Dashboard()) // backen Auth di sini
                                   );
                                 },
-                                color: Colors.white,
+                                style: ElevatedButton.styleFrom(
+                                    backgroundColor:Colors.white
+                                ),
                                 child: Text('Log in with Google', style: TextStyle(color: Colors.black, fontSize: 15),
                                 ),
                               ),
